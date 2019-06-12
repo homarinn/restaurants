@@ -54,7 +54,7 @@ class RestaurantsController < ApplicationController
     res = http.request(req)
     res_data = Hash.from_xml(res.body)
     restaurant = res_data["response"]["rest"]
-    @image, @name, @tel = restaurant["image_url"]["shop_image1"], restaurant["name"], restaurant["tel"]
+    @image, @name, @tel, @url = restaurant["image_url"]["shop_image1"], restaurant["name"], restaurant["tel"], restaurant["url"]
     @pr = restaurant["pr"]["pr_long"]? restaurant["pr"]["pr_long"]: "PRはありません"
     @opentime = restaurant["opentime"]? restaurant["opentime"] : "営業時間は不明です"
     @address = restaurant["address"]? restaurant["address"].sub(/ /,"<br>") : "住所は不明です"
