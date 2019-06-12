@@ -9,13 +9,13 @@ class RestaurantsController < ApplicationController
   def search
     latitude = params[:latitude]
     longitude = params[:longitude]
-    range = params[:range]
+    @range = params[:range]
     words = params[:word]
     data = {
       "keyid": "c64de82187c33b325c4ed6c51f3979ef",
       "latitude": latitude,
       "longitude": longitude,
-      "range": range,
+      "range": @range,
       "freeword": words,
       "hit_per_page": 100
     }

@@ -16,7 +16,7 @@
       <div class="form-group">
         <label for="word">検索ワード</label>
         <div class="input">
-          <input type="text" class="form-control" name="word" id="word" placeholder="（例）ラーメン">
+          <input type="text" class="form-control" name="word" id="word" placeholder = "(例)ラーメン,店名など" value="<%= params[:word] %>">
         </div>
       </div>
     </form>
@@ -39,3 +39,7 @@
     <% end %>
   </div>
 </div>
+
+<script>
+  document.getElementById('radius').options[<%= @range.to_i-1 %>].selected = true;
+</script>
