@@ -39,6 +39,9 @@ header h1 {
   text-align: center;
 }
 
+.info {
+  color: #5D86FF;
+}
 .search_form {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -49,6 +52,7 @@ header h1 {
 
 .search_form h4 {
   font-family: 'Noto Sans Japanese',   sans-serif;
+  color: #00336D;
 }
 
 .form-group {
@@ -85,6 +89,10 @@ select {
 .media-body h3{
   font-family: 'Noto Sans Japanese',   sans-serif;
   font-weight: 700;
+}
+
+.media-body h3 a {
+  color: #2C7CFF;
 }
 
 .media-body h5{
